@@ -17,6 +17,7 @@ const WrapperBottom = styled.div`
 
 const TopRibbon = styled(Ribbon)`
   width: 60%;
+  height: 60%;
   margin-top: -4em;
 
   @media (max-width: 800px) {
@@ -26,6 +27,7 @@ const TopRibbon = styled(Ribbon)`
 
 const BottomRibbon = styled(Ribbon)`
   width: 60%;
+  height: 60%;
   transform: rotate(180deg);
   margin-bottom: 0;
 
