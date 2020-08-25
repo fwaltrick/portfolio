@@ -39,8 +39,8 @@ export default function About() {
                 eager to experience a new culture and expand my worldview. But
                 definitely, the biggest move in my life happened sometime later
                 when I decided to make a career change. Graduated in Publishing,
-                I worked for years as an editor — and subsequent manager — in
-                one of the largest publishing groups in Brazil.
+                I worked for years as an editor — and subsequently as a manager
+                — in one of the largest publishing groups in Brazil.
               </Text>
               <Text>
                 After moving to Germany, I decided to begin a new path and got
