@@ -188,9 +188,15 @@ const Burger = ({ open, setOpen }) => {
   )
 }
 
+let defaultWidth = 0
+
+if (typeof window !== "undefined") {
+  defaultWidth = window.innerWidth
+}
+
 export default function Menu() {
   const [open, setOpen] = useState(false)
-  const [width, setWidth] = useState(null)
+  const [width, setWidth] = useState(defaultWidth)
   const { lang, setLang } = useContext(LangContext)
 
   const breakpoint = 800
