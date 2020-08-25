@@ -190,7 +190,7 @@ const Burger = ({ open, setOpen }) => {
 
 export default function Menu() {
   const [open, setOpen] = useState(false)
-  const [width, setWidth] = useState(800)
+  const [width, setWidth] = useState(null)
   const { lang, setLang } = useContext(LangContext)
 
   const breakpoint = 800
@@ -221,7 +221,54 @@ export default function Menu() {
 
   return (
     <>
-      {width >= breakpoint ? (
+      {width && width < breakpoint && (
+        <NavBarMob>
+          <Burger open={open} setOpen={setOpen} />
+          <div>
+            <ToggleLang onClick={toggleLanguage}></ToggleLang>
+          </div>
+          <NavMob open={open} setOpen={setOpen}>
+            <StyledListMob onClick={() => setOpen(false)}>
+              <Item>
+                <Link
+                  onClick={() => setOpen(false)}
+                  offset={-50}
+                  activeClass="current current_hi"
+                  to="hi"
+                >
+                  {lang === "eng" ? "Hi" : "Hallo"}
+                  <Circle size="mob">1</Circle>
+                </Link>
+              </Item>
+              <Item>
+                <Link
+                  onClick={() => setOpen(false)}
+                  offset={-45}
+                  activeClass="current current_about"
+                  to="about"
+                >
+                  {lang === "eng" ? "About Me" : "Über Mich"}
+                  <Circle size="mob">2</Circle>
+                </Link>
+              </Item>
+              <Item>
+                <Link
+                  onClick={() => setOpen(false)}
+                  offset={-45}
+                  activeClass="current current_projects"
+                  to="projects"
+                >
+                  {lang === "eng" ? "Projects" : "Projekte"}
+                  <Circle size="mob">3</Circle>
+                </Link>
+              </Item>
+              <MenuFooter size="mob" />
+            </StyledListMob>
+          </NavMob>
+        </NavBarMob>
+      )}
+
+      {width && width >= breakpoint && (
         <NavDesk>
           <StyledListDesk>
             <Item>
@@ -267,51 +314,6 @@ export default function Menu() {
             <MenuFooter />
           </div>
         </NavDesk>
-      ) : (
-        <NavBarMob>
-          <Burger open={open} setOpen={setOpen} />
-          <div>
-            <ToggleLang onClick={toggleLanguage}></ToggleLang>
-          </div>
-          <NavMob open={open} setOpen={setOpen}>
-            <StyledListMob onClick={() => setOpen(false)}>
-              <Item>
-                <Link
-                  onClick={() => setOpen(false)}
-                  offset={-50}
-                  activeClass="current current_hi"
-                  to="hi"
-                >
-                  {lang === "eng" ? "Hi" : "Hallo"}
-                  <Circle size="mob">1</Circle>
-                </Link>
-              </Item>
-              <Item>
-                <Link
-                  onClick={() => setOpen(false)}
-                  offset={-45}
-                  activeClass="current current_about"
-                  to="about"
-                >
-                  {lang === "eng" ? "About Me" : "Über Mich"}
-                  <Circle size="mob">2</Circle>
-                </Link>
-              </Item>
-              <Item>
-                <Link
-                  onClick={() => setOpen(false)}
-                  offset={-45}
-                  activeClass="current current_projects"
-                  to="projects"
-                >
-                  {lang === "eng" ? "Projects" : "Projekte"}
-                  <Circle size="mob">3</Circle>
-                </Link>
-              </Item>
-              <MenuFooter size="mob" />
-            </StyledListMob>
-          </NavMob>
-        </NavBarMob>
       )}
     </>
   )
