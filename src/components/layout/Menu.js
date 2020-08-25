@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useState, useEffect, useLayoutEffect } from "react"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 import MenuFooter from "./MenuFooter"
@@ -162,21 +162,21 @@ const StyledBurger = styled.button`
   }
 `
 
-export const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: var(--clr-black);
-  height: 100vh;
-  text-align: left;
-  padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-`
+// export const StyledMenu = styled.nav`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   background: var(--clr-black);
+//   height: 100vh;
+//   text-align: left;
+//   padding: 2rem;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   transform: translateX(-100%);
+//   transition: transform 0.3s ease-in-out;
+// `
 
 const Burger = ({ open, setOpen }) => {
   return (
@@ -195,10 +195,15 @@ export default function Menu() {
 
   const breakpoint = 800
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window !== "undefined") {
       setWidth(window.innerWidth)
       setOpen(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       const listener = window.addEventListener("resize", () => {
         setWidth(window.innerWidth)
         if (width >= breakpoint) {
