@@ -198,9 +198,10 @@ export default function Menu() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       setWidth(window.innerWidth)
+      setOpen(false)
       const listener = window.addEventListener("resize", () => {
         setWidth(window.innerWidth)
-        if (width > breakpoint) {
+        if (width >= breakpoint) {
           setOpen(false)
         }
       })
