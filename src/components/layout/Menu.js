@@ -190,7 +190,7 @@ const Burger = ({ open, setOpen }) => {
 
 export default function Menu() {
   const [open, setOpen] = useState(false)
-  const [width, setWidth] = useState(0)
+  const [width, setWidth] = useState(800)
   const { lang, setLang } = useContext(LangContext)
 
   const breakpoint = 800
@@ -215,7 +215,7 @@ export default function Menu() {
 
   return (
     <>
-      {width > breakpoint ? (
+      {width >= breakpoint ? (
         <NavDesk>
           <StyledListDesk>
             <Item>
