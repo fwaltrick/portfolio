@@ -188,21 +188,16 @@ const Burger = ({ open, setOpen }) => {
   )
 }
 
-let defaultWidth = 0
-
-if (typeof window !== "undefined") {
-  defaultWidth = window.innerWidth
-}
-
 export default function Menu() {
   const [open, setOpen] = useState(false)
-  const [width, setWidth] = useState(defaultWidth)
+  const [width, setWidth] = useState(0)
   const { lang, setLang } = useContext(LangContext)
 
   const breakpoint = 800
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      setWidth(window.innerWidth)
       const listener = window.addEventListener("resize", () => {
         setWidth(window.innerWidth)
         if (width > breakpoint) {
