@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const StyledTag = styled.button`
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   margin: 0.2rem 0;
   text-transform: uppercase;
   background: transparent;

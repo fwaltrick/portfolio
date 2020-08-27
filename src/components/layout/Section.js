@@ -40,9 +40,7 @@ const BottomRibbon = styled(Ribbon)`
 
 const MiddleRibbon = styled(middleRibbon)`
   width: 100%;
-
-  @media (max-width: 800px) {
-  }
+  height: 100%;
 `
 
 // const MiddleRibbon = styled.div`

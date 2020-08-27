@@ -14,7 +14,18 @@ const Item = styled.li`
 
   && {
     & > a {
-      transition: all 0.4s linear;
+      transition: all 0.3s linear;
+    }
+
+    & > a::after {
+      display: block;
+      content: attr(data-content);
+      font-family: "Bitter", serif;
+      font-weight: bold;
+      height: 1px;
+      margin-left: 2em;
+      color: transparent;
+      visibility: hidden;
     }
 
     & > a:hover {
@@ -26,12 +37,13 @@ const Item = styled.li`
 
     && {
       a > * {
-        transition: all 0.4s linear;
+        transition: all 0.3s linear;
       }
       & a:hover > * {
         cursor: pointer;
         background: var(--clr-pink);
         box-shadow: 1.5px 1.5px var(--clr-darkgray);
+        transition: transform 0.2s linear;
       }
     }
 
@@ -72,7 +84,8 @@ const NavDesk = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  height: 40vh;
+  height: 50vh;
+  height: (100% - 300px);
   margin-left: 0.5em;
   max-height: 300px;
   min-height: 200px;
@@ -280,6 +293,7 @@ export default function Menu() {
           <StyledListDesk>
             <Item>
               <Link
+                data-content={lang === "eng" ? "Hi" : "Hallo"}
                 activeClass="current current_hi"
                 to="hi"
                 spy={true}
@@ -292,6 +306,7 @@ export default function Menu() {
             </Item>
             <Item>
               <Link
+                data-content={lang === "eng" ? "About Me" : "Über Mich"}
                 activeClass="current current_about"
                 to="about"
                 spy={true}
@@ -304,6 +319,7 @@ export default function Menu() {
             </Item>
             <Item>
               <Link
+                data-content={lang === "eng" ? "Projects" : "Projekte"}
                 activeClass="current current_projects"
                 to="projects"
                 spy={true}

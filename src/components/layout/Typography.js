@@ -47,7 +47,8 @@ export const TagCaption = styled.p`
 `
 
 export const TagWrapper = styled.div`
-  margin: 1em 1.8em;
+  margin: 1.2em;
+  margin-bottom: 0;
   padding: 1em;
   border-radius: 9px;
   border: 0.5px;

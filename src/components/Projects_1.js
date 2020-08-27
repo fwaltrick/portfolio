@@ -114,11 +114,12 @@ export default function Projects_1() {
             </TagCaption>
             <Tag>React</Tag> <Tag>Next.js</Tag> <Tag>MongoDB</Tag>{" "}
             <Tag>Express</Tag> <Tag>Node</Tag> <Tag>Ant Design</Tag>{" "}
+            <Tag>SSR</Tag>{" "}
             <Tag>{lang === "eng" ? "Authentication" : "Authentifizierung"}</Tag>{" "}
             <Tag>Stripe API</Tag>{" "}
             <Tag>{lang === "eng" ? "CRUD Operations" : "CRUD Operationen"}</Tag>{" "}
             <Tag>{lang === "eng" ? "Pagination" : "Paginierung"}</Tag>{" "}
-            <Tag>SSR</Tag> <Tag>Responsive Design</Tag>
+            <Tag>Responsive Design</Tag>
           </TagWrapper>
         </ImageArea>
         <SubFooter active={1} />
