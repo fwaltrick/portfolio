@@ -7,7 +7,7 @@ const NotFoundPage = () => {
       <div
         style={{
           padding: "6em",
-          background: "var(--clr-grapefruit)",
+          background: "var(--clr-pink)",
         }}
       >
         <h1>NOT FOUND </h1>

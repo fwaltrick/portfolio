@@ -24,7 +24,7 @@ const Icon = styled.svg`
   &:hover,
   &:focus {
     path {
-      fill: #f36653;
+      fill: var(--clr-pink);
       opacity: 1;
     }
   }

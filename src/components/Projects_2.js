@@ -37,7 +37,7 @@ export default function Projects_2() {
   `)
 
   return (
-    <Section color="purple" position="middle" id="projects2" header>
+    <Section color="slate" position="middle" id="projects2" header>
       {lang === "eng" ? (
         <>
           <SubHeader>Projects</SubHeader>
@@ -101,7 +101,7 @@ export default function Projects_2() {
         </a>
         <TagWrapper>
           <TagCaption left>
-            {lang === "eng" ? "Keywords" : "Stichwörter"}:
+            {lang === "eng" ? "Keywords" : "Stichwörter"}
           </TagCaption>
           <Tag>React</Tag> <Tag>GraphQL</Tag> <Tag>PostgresQL</Tag>{" "}
           <Tag>Apollo</Tag> <Tag>Knex</Tag> <Tag>Ant Design</Tag>{" "}

@@ -38,7 +38,7 @@ export default function Projects_1() {
   `)
 
   return (
-    <Section color="purple" position="middle" id="projects1" header mirror>
+    <Section color="slate" position="middle" id="projects1" header mirror>
       <>
         {lang === "eng" ? (
           <>
@@ -110,15 +110,15 @@ export default function Projects_1() {
           </a>
           <TagWrapper>
             <TagCaption left>
-              {lang === "eng" ? "Keywords" : "Stichwörter"}:
+              {lang === "eng" ? "Keywords" : "Stichwörter"}
             </TagCaption>
             <Tag>React</Tag> <Tag>Next.js</Tag> <Tag>MongoDB</Tag>{" "}
             <Tag>Express</Tag> <Tag>Node</Tag> <Tag>Ant Design</Tag>{" "}
             <Tag>{lang === "eng" ? "Authentication" : "Authentifizierung"}</Tag>{" "}
-            <Tag>Stripe API</Tag> <Tag>SSR</Tag>{" "}
+            <Tag>Stripe API</Tag>{" "}
             <Tag>{lang === "eng" ? "CRUD Operations" : "CRUD Operationen"}</Tag>{" "}
             <Tag>{lang === "eng" ? "Pagination" : "Paginierung"}</Tag>{" "}
-            <Tag>Responsive Design</Tag>
+            <Tag>SSR</Tag> <Tag>Responsive Design</Tag>
           </TagWrapper>
         </ImageArea>
         <SubFooter active={1} />

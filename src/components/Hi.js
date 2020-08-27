@@ -39,7 +39,7 @@ export default function Hi() {
   const { lang } = useContext(LangContext)
 
   return (
-    <Section color="blue" position="first" id="hi">
+    <Section color="slate" position="first" id="hi">
       {lang === "eng" ? (
         <>
           <Greet>
@@ -49,13 +49,13 @@ export default function Hi() {
             My name is <Span color="yellow">Fabricio Waltrick</Span> and I am a
             developer.
           </Head>
-          <Intro>I enjoy building pretty things.</Intro>
+          <Intro>I enjoy building smart things.</Intro>
           <Intro>
             I'm based in Berlin, where I am constantly experimenting with new
             tools and technologies, and working with
-            <Span color="black"> Javascript</Span> in many shapes and forms —
+            <Span color="yellow"> Javascript</Span> in many shapes and forms —
             especially
-            <Span color="black"> React</Span>.
+            <Span color="yellow"> React</Span>.
           </Intro>
         </>
       ) : (
@@ -67,12 +67,12 @@ export default function Hi() {
             Ich heiße <Span color="yellow">Fabricio Waltrick</Span> und ich bin
             ein Entwickler.
           </Head>
-          <Intro>Ich liebe es, schöne Dinge zu bauen.</Intro>
+          <Intro>Ich liebe es, kluge Dinge zu bauen.</Intro>
           <Intro>
             Ich lebe in Berlin, wo ich ständig mit neuen Technologien und
-            Werkzeugen experimentiere, und mit
-            <Span color="black"> Javascript</Span> und seine Varianten mich
-            beschäftige — insbesondere <Span color="black">React</Span>.
+            Werkzeugen experimentiere, und mit{" "}
+            <Span color="yellow">Javascript</Span> und seine Varianten mich
+            beschäftige — insbesondere <Span color="yellow">React</Span>.
           </Intro>
         </>
       )}

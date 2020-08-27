@@ -38,19 +38,19 @@ const ToggleLabel = styled.label`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #f36653;
+    background: var(--clr-pink);
     transition: background 150ms linear;
   }
 
   & input[type="checkbox"]:checked + ${Back} {
-    background: #f36653;
+    background: var(--clr-pink);
   }
 
   & input[type="checkbox"] + ${Back} ${Toggle} {
     display: block;
     position: absolute;
     content: " ";
-    background: #4b4d6c;
+    background: var(--clr-darkgray);
     width: 50%;
     height: 100%;
     border-radius: 0.2em;
@@ -84,7 +84,7 @@ const ToggleLabel = styled.label`
   }
 
   & input[type="checkbox"] + ${Back} ${Label} ${LabelEn} {
-    color: #707070;
+    color: var(--clr-gray);
   }
 
   & input[type="checkbox"] + ${Back} ${LabelDe} {
@@ -92,7 +92,7 @@ const ToggleLabel = styled.label`
   }
 
   & input[type="checkbox"]:checked + ${Back} ${LabelDe} {
-    color: #707070;
+    color: var(--clr-gray);
   }
 `
 

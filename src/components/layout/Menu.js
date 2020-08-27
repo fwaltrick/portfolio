@@ -10,17 +10,28 @@ const Item = styled.li`
   display: flex;
   justify-content: flex-end;
   align-items: bottom;
+  font-size: 1.1rem;
 
   && {
+    & > a {
+      transition: all 0.4s linear;
+    }
+
     & > a:hover {
       cursor: pointer;
-      color: var(--clr-grapefruit);
+      color: var(--clr-pink);
+      /* text-shadow: 0.5px 1px var(--clr-gray); */
+      font-family: "Bitter", serif;
     }
 
     && {
+      a > * {
+        transition: all 0.4s linear;
+      }
       & a:hover > * {
         cursor: pointer;
-        background: var(--clr-grapefruit);
+        background: var(--clr-pink);
+        box-shadow: 1.5px 1.5px var(--clr-darkgray);
       }
     }
 
@@ -43,7 +54,7 @@ const Item = styled.li`
 const Circle = styled.div`
   font-family: "Bitter", serif;
   display: inline-block;
-  margin-left: 0.5rem;
+  margin: 0 0.1rem 0 0.5rem;
   width: ${props => (props.size === "desk" ? "1.5rem" : "3rem")};
   height: ${props => (props.size === "desk" ? "1.5rem" : "3rem")};
   border-radius: 50%;
@@ -51,7 +62,7 @@ const Circle = styled.div`
   color: #fff;
   line-height: 2.1;
   text-align: center;
-  background: #4b4d6c;
+  background: var(--clr-darkgray);
 `
 
 // Desktop Navigation
@@ -80,7 +91,7 @@ const StyledListDesk = styled.ul`
 
 //  Mobile Navigation
 const NavBarMob = styled.nav`
-  background: var(--clr-salmon);
+  background: var(--clr-yellow);
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -134,7 +145,7 @@ const StyledBurger = styled.button`
 
   && {
     &:hover {
-      color: var(--clr-grapefruit);
+      color: var(--clr-pink);
     }
   }
 
@@ -161,22 +172,6 @@ const StyledBurger = styled.button`
     }
   }
 `
-
-// export const StyledMenu = styled.nav`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   background: var(--clr-black);
-//   height: 100vh;
-//   text-align: left;
-//   padding: 2rem;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   transform: translateX(-100%);
-//   transition: transform 0.3s ease-in-out;
-// `
 
 const Burger = ({ open, setOpen }) => {
   return (
@@ -262,7 +257,19 @@ export default function Menu() {
                   <Circle size="mob">3</Circle>
                 </Link>
               </Item>
-              <MenuFooter size="mob" />
+              <div>
+                <Caption
+                  style={{
+                    margin: "2em 0",
+                    fontSize: "1rem",
+                    color: "var(--clr-darkgray)",
+                  }}
+                >
+                  {lang === "eng" ? "Get in touch" : "Kontakt"}
+                </Caption>
+
+                <MenuFooter size="mob" />
+              </div>
             </StyledListMob>
           </NavMob>
         </NavBarMob>

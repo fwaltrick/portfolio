@@ -14,6 +14,7 @@ import {
   SubFooter,
   Span,
   TagCaption,
+  TagWrapper,
 } from "./layout/Typography"
 import { LangContext } from "./LangContext"
 import Portfolio from "../images/logo_port.svg"
@@ -37,7 +38,7 @@ export default function Projects_4() {
     }
   `)
   return (
-    <Section color="purple" position="last" id="projects4" header>
+    <Section color="slate" position="last" id="projects4" header>
       {lang === "eng" ? (
         <>
           <SubHeader>Projects</SubHeader>
@@ -51,7 +52,7 @@ export default function Projects_4() {
             </Text>
             <Text>
               For the layout of the page, I had the idea of creating a stylized
-              ribbon acting as a single container for the content, with a smooth
+              ribbon as a single container for the content, with a smooth
               scrolling navigation.
             </Text>
 
@@ -94,7 +95,7 @@ export default function Projects_4() {
           fluid={image.sharp.fluid}
           imgStyle={{ objectFit: "contain" }}
           alt="Portfolio"
-          style={{ gridArea: "image", maxWidth: "410px" }}
+          style={{ gridArea: "image", minHeigth: "300px" }}
         />
         <a
           target="_blank"
@@ -103,13 +104,13 @@ export default function Projects_4() {
         >
           <Button>{lang === "eng" ? "Check it out" : "Guck mal"}</Button>
         </a>
-        <div style={{ margin: "1em 2.2em" }}>
+        <TagWrapper>
           <TagCaption left>
-            {lang === "eng" ? "Keywords" : "Stichwörter"}:
+            {lang === "eng" ? "Keywords" : "Stichwörter"}
           </TagCaption>{" "}
           <Tag>Gatsby</Tag> <Tag>React</Tag> <Tag>Styled Components</Tag>{" "}
           <Tag>SVG</Tag> <Tag>Responsive Design</Tag>{" "}
-        </div>
+        </TagWrapper>
       </ImageArea>
 
       <SubFooter active={4} />

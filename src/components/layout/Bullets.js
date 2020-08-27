@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 import Arrow from "../../images/chevron.svg"
@@ -11,14 +11,18 @@ const WrapperBullets = styled.div`
   display: flex;
   justify-content: space-around;
   width: 9em;
+
+  @media screen and (max-width: 800px) {
+    width: 12em;
+  }
 `
 const Circle = styled.div`
   font-family: "Bitter", serif;
   font-size: 0.6rem;
-  padding: 0.7rem;
-  color: var(--clr-darkgray);
+  padding: 0.8rem;
+  color: var(--clr-black);
   background: ${props =>
-    props.active ? "var(--clr-yellow)" : "var(--clr-lilac)"};
+    props.active ? "var(--clr-yellow)" : "var(--clr-silver)"};
   height: 0.9rem;
   width: 0.9rem;
   line-height: 2rem;
@@ -30,7 +34,15 @@ const Circle = styled.div`
   &:hover,
   &:focus {
     background: ${props =>
-      props.active ? "var(--clr-yellow)" : "var(--clr-grapefruit)"};
+      props.active ? "var(--clr-yellow)" : "var(--clr-pink)"};
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 0.7rem;
+    padding: 1rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    line-height: 2.2rem;
   }
 `
 
@@ -44,7 +56,7 @@ const StyledArrow = styled(Arrow)`
   &:hover,
   &:focus {
     path {
-      fill: var(--clr-grapefruit);
+      fill: var(--clr-pink);
     }
   }
 `
@@ -59,6 +71,22 @@ const Down = styled(StyledArrow)`
 `
 
 export default function Bullets({ active }) {
+  const [width, setWidth] = useState(null)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const listener = window.addEventListener("resize", () => {
+        setWidth(window.innerWidth)
+        if (width >= 800) {
+        }
+      })
+
+      return () => {
+        window.removeEventListener("resize", listener)
+      }
+    }
+  }, [width])
+
   return (
     <div>
       <Wrapper>
@@ -68,21 +96,46 @@ export default function Bullets({ active }) {
           </StyledLink>
         )}
         <WrapperBullets>
-          <StyledLink to="projects1" smooth={true} duration={500}>
+          <StyledLink
+            to="projects1"
+            smooth={true}
+            duration={500}
+            offset={width <= 800 ? -45 : 0}
+          >
             <Circle active={active === 1}>I</Circle>
           </StyledLink>
-          <StyledLink to="projects2" smooth={true} duration={500}>
+          <StyledLink
+            to="projects2"
+            smooth={true}
+            duration={500}
+            offset={width <= 800 ? -45 : 0}
+          >
             <Circle active={active === 2}>II</Circle>
           </StyledLink>
-          <StyledLink to="projects3" smooth={true} duration={500}>
+          <StyledLink
+            to="projects3"
+            smooth={true}
+            duration={500}
+            offset={width <= 800 ? -45 : 0}
+          >
             <Circle active={active === 3}>III</Circle>
           </StyledLink>
-          <StyledLink to="projects4" smooth={true} duration={500}>
+          <StyledLink
+            to="projects4"
+            smooth={true}
+            duration={500}
+            offset={width <= 800 ? -45 : 0}
+          >
             <Circle active={active === 4}>IV</Circle>
           </StyledLink>
         </WrapperBullets>
         {(active === 1 || active === 2 || active === 3) && (
-          <StyledLink to={`projects${active + 1}`} smooth={true} duration={500}>
+          <StyledLink
+            to={`projects${active + 1}`}
+            smooth={true}
+            duration={500}
+            offset={width <= 800 ? -45 : 0}
+          >
             <Down />
           </StyledLink>
         )}

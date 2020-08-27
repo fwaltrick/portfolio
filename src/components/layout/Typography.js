@@ -7,7 +7,7 @@ export const Greet = styled.h1`
   margin-bottom: 0;
 
   @media screen and (max-width: 800px) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 `
 
@@ -16,7 +16,7 @@ export const Head = styled.p`
   margin-bottom: 0.5em;
 
   @media screen and (max-width: 800px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `
 
@@ -25,12 +25,12 @@ export const Intro = styled.p`
   margin-bottom: 0.5em;
 
   @media screen and (max-width: 800px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 `
 
 export const Caption = styled.span`
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   color: var(--clr-black);
   letter-spacing: 3px;
@@ -40,18 +40,29 @@ export const Caption = styled.span`
 
 export const TagCaption = styled.p`
   font-family: "Bitter", serif;
-  font-size: 0.75rem;
-  color: var(--clr-black);
+  font-size: 1rem;
+  text-shadow: 1px 1px var(--clr-darkgray);
+  color: var(--clr-yellow);
+  margin-bottom: 0.2em;
 `
 
 export const TagWrapper = styled.div`
-  margin: 1em 2.2em;
+  margin: 1em 1.8em;
+  padding: 1em;
+  border-radius: 9px;
+  border: 0.5px;
+
+  @media screen and (max-width: 800px) {
+    margin: 0;
+  }
 `
 
 export const Span = styled.span`
   font-family: "Bitter", serif;
   color: ${props => "var(--clr-" + props.color + ")"};
   font-size: ${props => (props.size ? props.size + "rem" : "inherit")};
+  /* text-shadow: ${props =>
+    props.shadow ? "2.5px 2.5px var(--clr-darkgray)" : "none"}; */
   letter-spacing: 0.5px;
 `
 
@@ -84,7 +95,9 @@ export const ImageArea = styled.div`
 
 const SubHeaderText = styled.h4`
   display: inline-block;
-  opacity: 0.85;
+  font-size: 0.9rem;
+  color: var(--clr-black);
+  opacity: 0.9;
   padding: 0.1em 0.5em;
   background: rgba(255, 255, 255, 0.4);
 `

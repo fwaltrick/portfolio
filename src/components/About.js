@@ -28,7 +28,7 @@ export default function About() {
   `)
 
   return (
-    <Section color="green" position="middle" id="about" header>
+    <Section color="slate" position="middle" id="about" header>
       <>
         {lang === "eng" ? (
           <>
@@ -45,7 +45,7 @@ export default function About() {
               <Text>
                 After moving to Germany, I decided to begin a new path and got
                 into a{" "}
-                <Span color="black">Full-stack Development Bootcamp</Span>: an
+                <Span color="yellow">Full-stack Development Bootcamp</Span>: an
                 intensive full-time five-month program, where I learned front-
                 and back-end development in a hands-on approach. Since then,
                 I’ve been honing my knowledge — especially regarding to
@@ -70,7 +70,7 @@ export default function About() {
               <Text>
                 Nach meinem Unzug nach Deutschland habe ich mich für einen neuen
                 Weg entschieden und in ein
-                <Span color="black">
+                <Span color="yellow">
                   {" "}
                   Full-Stack-Entwicklungs-Bootcamp
                 </Span>{" "}

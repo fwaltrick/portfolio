@@ -3,17 +3,17 @@ import styled from "styled-components"
 
 const StyledTag = styled.button`
   display: inline-block;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
+  margin: 0.2rem 0;
   text-transform: uppercase;
-  opacity: 0.5;
+  background: transparent;
   align-items: center;
   letter-spacing: 3px;
   font-weight: 400;
   border-radius: 4px;
-  color: var(--clr-black);
+  color: #fff;
   padding: 0.5em 1em;
-  border-width: 1px;
-  border-color: rgba(39, 40, 56, 1, 0.25);
+  border: 1px solid var(--clr-gray);
   align-self: center;
 
   /* &:hover,
@@ -21,7 +21,7 @@ const StyledTag = styled.button`
     path {
       fill: #fff;
     }
-    background: var(--clr-grapefruit);
+    background: var(--clr-pink);
     color: #fff;
   } */
 `

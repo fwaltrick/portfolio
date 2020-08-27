@@ -25,7 +25,7 @@ const StyledButton = styled.button`
     path {
       fill: #fff;
     }
-    background: var(--clr-grapefruit);
+    background: var(--clr-pink);
     color: #fff;
   }
 `

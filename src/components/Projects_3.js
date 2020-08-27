@@ -13,6 +13,7 @@ import {
   SubHeader,
   SubFooter,
   TagCaption,
+  TagWrapper,
 } from "./layout/Typography"
 import { LangContext } from "./LangContext"
 import RomanCalculator from "../images/logo_rc.svg"
@@ -37,7 +38,7 @@ export default function Projects_3() {
   `)
 
   return (
-    <Section color="purple" position="middle" id="projects3" header mirror>
+    <Section color="slate" position="middle" id="projects3" header mirror>
       {lang === "eng" ? (
         <>
           <SubHeader>Projects</SubHeader>
@@ -83,7 +84,7 @@ export default function Projects_3() {
           fluid={image.sharp.fluid}
           imgStyle={{ objectFit: "contain" }}
           alt="Roman Calculator App"
-          style={{ gridArea: "image", maxWidth: "410px" }}
+          style={{ gridArea: "image", maxHeight: "270px" }}
         />
         <a
           target="_blank"
@@ -92,13 +93,13 @@ export default function Projects_3() {
         >
           <Button>{lang === "eng" ? "Check it out" : "Guck mal"}</Button>
         </a>
-        <div style={{ margin: "1em 2.2em" }}>
+        <TagWrapper>
           <TagCaption left>
-            {lang === "eng" ? "Keywords" : "Stichwörter"}:
+            {lang === "eng" ? "Keywords" : "Stichwörter"}
           </TagCaption>{" "}
           <Tag>React</Tag> <Tag>JavaScript</Tag> <Tag>SVG</Tag> <Tag>Jest</Tag>{" "}
           <Tag>React Test Library</Tag> <Tag>Parcel</Tag>{" "}
-        </div>
+        </TagWrapper>
       </ImageArea>
 
       <SubFooter active={3} />
