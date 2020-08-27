@@ -99,11 +99,14 @@ p {
 `
 
 const Main = styled.div`
+  margin: 0 auto;
   position: relative;
   display: grid;
+  justify-content: center;
+  align-content: center;
   grid-template-areas: "nav content";
   grid-gap: 2.5em;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: auto auto;
   color: #fff;
 
   @media screen and (max-width: 900px) {
