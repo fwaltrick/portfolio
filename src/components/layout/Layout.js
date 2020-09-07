@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 :root {
   font: 1rem/1.6 'Roboto', sans-serif;
   font-weight: 300;
-  --clr-salmon: #f0ece2;
+  --clr-alabaster: #f0ece2;
   --clr-slate: #6b778d;
   --clr-pink: #e14594;
   --clr-yellow: #ffd700;
@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   margin: 0;
-  background: var(--clr-salmon);
+  background: var(--clr-alabaster);
 
 a {
   text-decoration: none;

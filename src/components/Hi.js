@@ -49,7 +49,6 @@ export default function Hi() {
             My name is <Span color="yellow">Fabricio Waltrick</Span> and I am a
             developer.
           </Head>
-          <Intro>I enjoy building smart things.</Intro>
           <Intro>
             I'm based in Berlin, where I am constantly experimenting with new
             tools and technologies, and working with
@@ -67,7 +66,6 @@ export default function Hi() {
             Ich heiße <Span color="yellow">Fabricio Waltrick</Span> und ich bin
             ein Entwickler.
           </Head>
-          <Intro>Ich liebe es, kluge Dinge zu bauen.</Intro>
           <Intro>
             Ich lebe in Berlin, wo ich ständig mit neuen Technologien und
             Werkzeugen experimentiere, und mit{" "}
